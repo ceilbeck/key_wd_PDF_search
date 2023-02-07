@@ -2,7 +2,7 @@
 #
 # Looks for key word list in a directory of pdf files
 # cd tex/software/python/FvWsearch
-import pdfplumber, re, sys, glob, os, collections, time, datetime, miner_lib as ml
+import pdfplumber, re, sys, glob, os, collections, time, datetime, key_wd_PDF_search as ml
 
 def main():
     starttime = time.time()
@@ -92,7 +92,7 @@ def main():
         for word in sorted(key_wds):
                 op_f.write("{0:12} : {1:4}\n".format(word, key_wds[word]))
          
-    print("miner1.py calculation time = {0:8.4f} secs\n".
+    print("key_wd_PDF_search.py calculation time = {0:8.4f} secs\n".
           format(time.time()-starttime))
          
     op_f.close()
@@ -100,7 +100,7 @@ def main():
     
     dt = datetime.datetime.now()
 
-    f_notes.write("Run of miner1.py on ")
+    f_notes.write("Run of key_wd_PDF_search.py on ")
     f_notes.write(dt.strftime("%c"))
 
     f_notes.write("\n\nKeywords = \n")
