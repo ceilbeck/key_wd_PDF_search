@@ -6,12 +6,15 @@ This program searches a directory of PDF files,  For each PDF file it finds, it 
 ## Usage
 **\> python3  key_wd_PDF_search.py  \<dir1\>  \[\<dir2\>\]**
 
-where **\<dir1\>** is the directory to be searched, and the optional \<dir2\> is the destination for the output files.  If **\<dir2\>** is omitted, the destination for the output files defaults to **\<dir1\>**.
+where **\<dir1\>** is the directory to be searched, and the optional **\<dir2\>** is the destination for the output files.  If **\<dir2\>** is omitted, the destination for the output files defaults to **\<dir1\>**.
 
-You also need a plain text file called **key_wds.txt** in \<dir1\>  containing all the key words you are interested in, one per line.
+You also need a plain text file called **key_wds.txt** in **\<dir1\>**  containing all the key words you are interested in, one per line.
 
 ### Prerequisite
 
 **key_wds.txt** uses pdfplumber, so this needs to be installed before your first run.
 
 **\> pip install pdfplumber**
+
+### Note
+This program is intended to be used for examining scientific journal articles.  Such articles come in a variety of layout formats, 1-column, 2-column, etc.  The program makes no attempt to identify which format any specific paper uses, but assumes that the first page is single column (to cover the abstracts) and the remaining pages are all in 2-column format. Thus it may misidentify some line breaks, shown as "|" in the output text.
