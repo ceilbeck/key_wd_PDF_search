@@ -20,3 +20,7 @@ You also need a plain text file called **key_wds.txt** in **\<dir1\>**  containi
 This program is intended to be used for examining scientific journal articles.  Such articles come in a variety of layout formats, 1-column, 2-column, etc.  The program makes no attempt to identify which format any specific paper uses, but assumes that the first page is single column (to cover the abstracts) and the remaining pages are all in 2-column format. Thus it may misidentify some line breaks, shown as "|" in the output text.
 
 The default program prints 50 characters on either side of the key word found, to give the context.  Change the constant **pad** at line 135 if you want to use another value.
+
+The use of this code in a literature survey is decribed in the paper *Data mining versus manual screening to select papers for inclusion in systematic reviews: a novel method to increase efficiency*, Elena Ierardi, J Chris Eilbeck, Frederike van Wijck, Myzoon Ali and Fiona Coupar, submitted for publication.
+
+Chris Eilbeck J.C.Eilbeck@hw.ac.uk
