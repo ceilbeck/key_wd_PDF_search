@@ -100,6 +100,9 @@ def main():
                        kw_list(text2, k_wds, key_wds, key_wds_overall, op_f)
                     if text1 is None and text2 is None:
                        op_f.write(f"Page {i+1}, no matches this page\n") 
+        except : UnicodeEncodeError:
+               print("")
+            #   print("Unicode error")  #   '\u2217'?
         except :
             print("Exception!")
             print(fileName)
