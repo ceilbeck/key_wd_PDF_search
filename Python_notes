@@ -1,8 +1,6 @@
-The two subroutines, placed in a library file “minor1_lib.py”, are the key components of the Python code.
- 
 The line “import re” imports a library of Python routines called “re”.
 
-The routine “pattern()” simply sets up the list of key words, separated by the “or” symbol “|”  The characters “+ \” just break up the line so the text is more readable.
+The routine “pattern()” simply sets up the list of key words, separated by the “or” symbol:“|”  The characters “+ \” just break up the line so the text is more readable.
 
 The routine “kw_list()” is the one that does all the work.  It looks for the text “pattern” in the string “text”.  For each key word found, it prints out the key word in square brackets, together with 50 characters (“ pad”) on either side.  It also increments the counters “key_wds” and “key_wds_overall” to keep track of how many times each key word appears, both in the current document and in the overall multi-document run.  The “op_f” variable is the address of the output file for results.
 
